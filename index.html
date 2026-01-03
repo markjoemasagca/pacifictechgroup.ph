@@ -3,83 +3,61 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Community Care Initiative</title>
-  <link rel="stylesheet" href="styles.css"/>
+  <title>Modern Website</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
-<header class="navbar">
-  <div class="logo">CommunityCare</div>
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#programs">Programs</a>
-    <a href="#about">About</a>
-    <a href="#help">Get Help</a>
-  </nav>
-</header>
+  <header class="navbar">
+    <div class="logo">MyWebsite</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#features">Features</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn">☰</button>
+  </header>
 
-<section id="home" class="hero">
-  <div class="hero-content">
-    <h1>You Are Not Alone</h1>
-    <p>Free, confidential, and inclusive health services for everyone.</p>
-    <button onclick="scrollTo('help')">Get Support</button>
-  </div>
-</section>
+  <section id="home" class="hero">
+    <h1>Build Stunning Websites Faster</h1>
+    <p>Clean design. Responsive layout. Modern experience.</p>
+    <button onclick="scrollToSection('contact')">Get Started</button>
+  </section>
 
-<section id="programs" class="programs reveal">
-  <h2>Our Programs</h2>
-  <div class="program-grid">
-    <div class="program-card">
-      <h3>HIV Testing</h3>
-      <p>Confidential and judgment-free testing services.</p>
+  <section id="features" class="features">
+    <h2>Features</h2>
+    <div class="feature-grid">
+      <div class="card">⚡ Fast Performance</div>
+      <div class="card">📱 Fully Responsive</div>
+      <div class="card">🎨 Modern Design</div>
+      <div class="card">🔒 Secure & Reliable</div>
     </div>
-    <div class="program-card">
-      <h3>Counseling</h3>
-      <p>Mental health and peer counseling support.</p>
-    </div>
-    <div class="program-card">
-      <h3>Education</h3>
-      <p>Workshops, talks, and community outreach.</p>
-    </div>
-    <div class="program-card">
-      <h3>Community Care</h3>
-      <p>Safe spaces and support networks.</p>
-    </div>
-  </div>
-</section>
+  </section>
 
-<section id="about" class="about reveal">
-  <div class="about-content">
-    <h2>Who We Are</h2>
+  <section id="about" class="about">
+    <h2>About Us</h2>
     <p>
-      CommunityCare is a volunteer-driven organization providing
-      inclusive healthcare, education, and support services to
-      underserved communities.
+      We craft beautiful, high-performance websites using modern web technologies.
+      Our focus is simplicity, speed, and user experience.
     </p>
-  </div>
-</section>
+  </section>
 
-<section id="help" class="help reveal">
-  <h2>Need Help?</h2>
-  <form id="helpForm">
-    <input type="text" placeholder="Full Name" required />
-    <input type="email" placeholder="Email Address" required />
-    <select required>
-      <option value="">Select Service</option>
-      <option>HIV Testing</option>
-      <option>Counseling</option>
-      <option>Education</option>
-    </select>
-    <textarea placeholder="How can we help you?" required></textarea>
-    <button type="submit">Request Support</button>
-  </form>
-  <p id="formStatus"></p>
-</section>
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <form id="contactForm">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <p id="formMessage"></p>
+  </section>
 
-<footer>
-  <p>© 2026 CommunityCare Initiative. All rights reserved.</p>
-</footer>
+  <footer>
+    © 2026 MyWebsite. All rights reserved.
+  </footer>
 
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
