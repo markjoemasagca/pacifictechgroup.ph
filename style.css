@@ -173,3 +173,39 @@ footer {
   color: white;
   padding: 3rem 0;
 }
+
+/* Donation QR */
+.donate-grid {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 3rem;
+  align-items: center;
+}
+
+.qr-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.qr-card small {
+  display: block;
+  margin-top: 1rem;
+  color: #4a6b63;
+}
+
+#donation-qr {
+  width: 220px;
+  height: 220px;
+  margin: 0 auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .donate-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
