@@ -13,6 +13,7 @@ document.querySelectorAll('.timeline-item').forEach(item => {
     );
   });
 });
+
 // ===== Donation QR Code =====
 document.addEventListener("DOMContentLoaded", () => {
   const donationURL = "https://your-donation-link-here.com";
@@ -26,4 +27,4 @@ document.addEventListener("DOMContentLoaded", () => {
     correctLevel: QRCode.CorrectLevel.H
   });
 });
-const donationURL = "https://your-donation-link-here.com";
+
