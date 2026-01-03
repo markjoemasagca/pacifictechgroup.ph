@@ -13,18 +13,3 @@ document.querySelectorAll('.timeline-item').forEach(item => {
     );
   });
 });
-
-// ===== Donation QR Code =====
-document.addEventListener("DOMContentLoaded", () => {
-  const donationURL = "https://your-donation-link-here.com";
-
-  new QRCode(document.getElementById("donation-qr"), {
-    text: donationURL,
-    width: 220,
-    height: 220,
-    colorDark: "#159B7E",
-    colorLight: "#ffffff",
-    correctLevel: QRCode.CorrectLevel.H
-  });
-});
-
