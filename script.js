@@ -1,25 +1,29 @@
-function scrollToSection(id) {
-  document.getElementById(id).scrollIntoView({
-    behavior: "smooth"
+// Simple parallax effect
+window.addEventListener('scroll', () => {
+  document.querySelectorAll('.parallax').forEach(layer => {
+    layer.style.transform = `translateY(${window.scrollY * 0.15}px)`;
   });
-}
-
-// Contact Form Logic
-const form = document.getElementById("contactForm");
-const message = document.getElementById("formMessage");
-
-form.addEventListener("submit", function (e) {
-  e.preventDefault();
-  message.textContent = "✅ Message sent successfully!";
-  message.style.color = "green";
-  form.reset();
 });
 
-// Mobile menu toggle
-const menuBtn = document.getElementById("menuBtn");
-const nav = document.querySelector(".navbar nav");
-
-menuBtn.addEventListener("click", () => {
-  nav.style.display = nav.style.display === "flex" ? "none" : "flex";
-  nav.style.flexDirection = "column";
+// Timeline modal logic (basic)
+document.querySelectorAll('.timeline-item').forEach(item => {
+  item.addEventListener('click', () => {
+    alert(
+      `${item.dataset.title}\n${item.dataset.year}\nTheme: ${item.dataset.theme}`
+    );
+  });
 });
+// ===== Donation QR Code =====
+document.addEventListener("DOMContentLoaded", () => {
+  const donationURL = "https://your-donation-link-here.com";
+
+  new QRCode(document.getElementById("donation-qr"), {
+    text: donationURL,
+    width: 220,
+    height: 220,
+    colorDark: "#159B7E",
+    colorLight: "#ffffff",
+    correctLevel: QRCode.CorrectLevel.H
+  });
+});
+const donationURL = "https://your-donation-link-here.com";

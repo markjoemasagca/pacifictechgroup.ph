@@ -3,61 +3,178 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Modern Website</title>
-  <link rel="stylesheet" href="style.css"/>
+  <title>PACIFICTECH RTIC CESSE | Synergy for a Sustainable Tomorrow</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+	<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
 </head>
 <body>
 
-  <header class="navbar">
-    <div class="logo">MyWebsite</div>
+<header class="site-header">
+  <div class="container nav">
+    <div class="logo">
+      <img src="logo.png" alt="PACIFICTECH RTIC CESSE logo"/>
+    </div>
     <nav>
-      <a href="#home">Home</a>
-      <a href="#features">Features</a>
       <a href="#about">About</a>
+      <a href="#programs">Programs</a>
+      <a href="#timeline">BIOME</a>
+      <a href="#resources">Research</a>
+      <a href="#involved">Get Involved</a>
       <a href="#contact">Contact</a>
     </nav>
-    <button class="menu-btn" id="menuBtn">☰</button>
-  </header>
-
-  <section id="home" class="hero">
-    <h1>Build Stunning Websites Faster</h1>
-    <p>Clean design. Responsive layout. Modern experience.</p>
-    <button onclick="scrollToSection('contact')">Get Started</button>
-  </section>
-
-  <section id="features" class="features">
-    <h2>Features</h2>
-    <div class="feature-grid">
-      <div class="card">⚡ Fast Performance</div>
-      <div class="card">📱 Fully Responsive</div>
-      <div class="card">🎨 Modern Design</div>
-      <div class="card">🔒 Secure & Reliable</div>
+    <div class="nav-tools">
+      <button aria-label="Search">🔍</button>
+      <button aria-label="Language">🌐</button>
     </div>
-  </section>
+  </div>
+</header>
 
-  <section id="about" class="about">
-    <h2>About Us</h2>
-    <p>
-      We craft beautiful, high-performance websites using modern web technologies.
-      Our focus is simplicity, speed, and user experience.
-    </p>
-  </section>
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-text">
+      <h1>Synergy for a sustainable tomorrow</h1>
+      <p>
+        PACIFICTECH RTIC CESSE is an NGO advancing research, training,
+        innovation, and biodiversity conservation through community-driven science.
+      </p>
+      <div class="hero-cta">
+        <a class="btn primary" href="#timeline">Explore BIOME Timeline</a>
+        <a class="btn secondary" href="#involved">Get Involved</a>
+      </div>
+    </div>
 
-  <section id="contact" class="contact">
-    <h2>Contact</h2>
-    <form id="contactForm">
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <textarea placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
+    <div class="hero-image">
+      <div class="parallax water"></div>
+      <div class="parallax leaves"></div>
+      <div class="science-icons">
+        <span>🌊</span><span>🌱</span><span>🔬</span><span>📍</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section">
+  <div class="container two-col">
+    <div>
+      <h2>Our Mission</h2>
+      <p>
+        We connect rigorous research with grassroots action—building capacity,
+        restoring ecosystems, and empowering communities across coastal and
+        island environments.
+      </p>
+    </div>
+    <div class="team-grid">
+      <img src="team1.jpg" alt="Team member"/>
+      <img src="team2.jpg" alt="Team member"/>
+      <img src="team3.jpg" alt="Team member"/>
+      <img src="team4.jpg" alt="Team member"/>
+    </div>
+  </div>
+</section>
+
+<!-- BIOME TIMELINE -->
+<section id="timeline" class="section alt">
+  <div class="container">
+    <h2>BIOME Timeline</h2>
+
+    <div class="timeline">
+      <div class="timeline-item" data-title="BIOME 1" data-year="2015" data-theme="Mangroves">
+        <span class="badge">1</span>
+        <p>Mangrove Restoration</p>
+      </div>
+      <div class="timeline-item" data-title="BIOME 5" data-year="2020" data-theme="COVID-19">
+        <span class="badge">5</span>
+        <p>Virtual BIOME</p>
+      </div>
+      <div class="timeline-item" data-title="BIOME 9" data-year="2024" data-theme="Climate Action">
+        <span class="badge">9</span>
+        <p>Climate Innovation</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAMS -->
+<section id="programs" class="section">
+  <div class="container">
+    <h2>Programs & Hubs</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3>Mangrovization Hub</h3>
+        <p>Community-led mangrove conservation and blue carbon initiatives.</p>
+        <a href="#">Learn more →</a>
+      </div>
+      <div class="card">
+        <h3>Aquaculture Hub</h3>
+        <p>Sustainable fisheries and food security research.</p>
+        <a href="#">Learn more →</a>
+      </div>
+      <div class="card">
+        <h3>Climate Change Hub</h3>
+        <p>Adaptation, mitigation, and resilience-building programs.</p>
+        <a href="#">Learn more →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GET INVOLVED -->
+<section id="involved" class="section alt">
+  <div class="container">
+    <h2>Get Involved</h2>
+    <form class="cta-form">
+      <input type="text" placeholder="Full name" required />
+      <input type="email" placeholder="Email address" required />
+      <select>
+        <option>Volunteer</option>
+        <option>Donate</option>
+        <option>Host a BIOME</option>
+      </select>
+      <button class="btn primary">Join Us</button>
     </form>
-    <p id="formMessage"></p>
-  </section>
+  </div>
+</section>
 
-  <footer>
-    © 2026 MyWebsite. All rights reserved.
-  </footer>
+<footer id="contact">
+  <div class="container footer-grid">
+    <div>
+      <h4>PACIFICTECH RTIC CESSE</h4>
+      <p>Email: info@pacifictech.org</p>
+    </div>
+    <form class="newsletter">
+      <label>Newsletter</label>
+      <input type="email" placeholder="Your email"/>
+      <button>Subscribe</button>
+    </form>
+  </div>
+</footer>
 
-  <script src="script.js"></script>
+<script src="script.js"></script>
+<section id="donate" class="section">
+  <div class="container donate-grid">
+    <div>
+      <h2>Support Our Work</h2>
+      <p>
+        Scan the QR code to make a secure donation and directly support
+        research, training, and biodiversity conservation projects.
+      </p>
+      <p class="donation-note">
+        Every contribution helps strengthen community-led science 🌱
+      </p>
+    </div>
+
+    <div class="qr-card">
+      <div id="donation-qr" aria-label="Donation QR code"></div>
+      <small>Scan with your mobile banking or payment app</small>
+    </div>
+  </div>
+</section>
+
 </body>
 </html>
