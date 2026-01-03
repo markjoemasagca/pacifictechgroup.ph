@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #f4f6f8;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: #111;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  align-items: center;
+  z-index: 1000;
+}
+
+.navbar nav a {
+  color: #fff;
+  margin-left: 1.5rem;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.navbar nav a:hover {
+  color: #00c6ff;
+}
+
+.menu-btn {
+  display: none;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  background: linear-gradient(120deg, #00c6ff, #0072ff);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 60px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+}
+
+.hero button {
+  margin-top: 1.5rem;
+  padding: 12px 30px;
+  border: none;
+  background: #111;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 25px;
+}
+
+/* FEATURES */
+.features {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* ABOUT */
+.about {
+  background: white;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+/* CONTACT */
+.contact {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.contact form {
+  max-width: 400px;
+  margin: auto;
+}
+
+.contact input,
+.contact textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.contact button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: #0072ff;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+/* FOOTER */
+footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .navbar nav {
+    display: none;
+  }
+
+  .menu-btn {
+    display: block;
+    background: none;
+    color: white;
+    font-size: 1.5rem;
+    border: none;
+  }
+}
